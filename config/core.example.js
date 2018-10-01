@@ -44,11 +44,6 @@ config.CONTACTS = [
 	'<a href="http://twitter.com/YourTwitter">@YourTwitter</a>'
 ];
 
-// Put your grills in public/images/grills and then link them here for them to randomly appear
-// on rendered pages.
-config.GRILLS = [
-];
-
 // Maximum number of files to upload at once
 // Default: 10
 config.MAX_UPLOAD_COUNT = 10;
