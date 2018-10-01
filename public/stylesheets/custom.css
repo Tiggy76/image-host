@@ -1,0 +1,465 @@
+html {
+	height: 100%;
+}
+
+body {
+	background-color: #303030;
+	animation-duration: 0.2s;
+	transition-timing-function: ease-in;
+	animation-fill-mode: both;
+	animation-name: fadeIn;
+	color: #ccc
+}
+
+#nojs-upload-button {
+	margin-right: 1em;
+}
+
+#nojs-upload-button>input {
+	line-height: 1.6;
+}
+
+#upload-button {
+	margin-bottom: 2em;
+}
+
+.title {
+	margin-bottom: -5px;
+}
+
+.summary {
+	margin-top: 10%;
+}
+
+.toolinfo {
+	margin-top: 0px;
+}
+
+.links {
+	margin-top: 10em;
+	margin-bottom: 10em;
+}
+
+.header {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #ccc;
+	text-align: center;
+	background-color: #252525;
+	border-bottom: 1px solid #303030;
+}
+
+.footer {
+	margin-top: 25px;
+	color: #ccc;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+.hidden {
+	display: none;
+}
+
+.preview img {
+	border-radius: 4px;
+	min-width: 60px;
+	min-height: 60px;
+	max-width: 60px;
+	max-height: 60px;
+}
+
+.preview {
+	margin-right: 10px;
+}
+
+.error {
+	color: #f00;
+}
+
+.progress-outer {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid #FFF;
+	border-radius: 6px;
+	box-shadow: 0px 0px 0px 1px #000;
+	color: transparent;
+	display: inline-block;
+	font-size: 0px;
+	float: right;
+	height: 10px;
+	margin: 6px 6px 0px;
+	overflow: hidden;
+	vertical-align: middle;
+	width: 50px;
+}
+
+.progress-inner {
+	background-color: #000;
+	height: 10px;
+	margin: 0px;
+	width: 0px;
+}
+
+.login_splash {
+	width: 100%;
+	height: auto;
+}
+
+.load_mask {
+	text-align: center;
+}
+
+input.view {
+	height: 22px;
+	text-align: right;
+	width: 60%;
+	margin-bottom: 0rem;
+}
+
+input.view:disabled {
+	background-color: #DDD;
+}
+
+button.apply {
+	height: 22px;
+	line-height: 24px;
+	margin-left: 6px;
+	margin-bottom: 0rem;
+	width: calc(40% - 6px);
+}
+
+button.apply[state=success] {
+	border-color: lime;
+	color: lime;
+}
+
+#main {
+	display: flex;
+	flex-direction: column;
+}
+
+#users>.row {
+	border-top: 1px solid #DDD;
+}
+
+button.rename {
+	margin-left: 6px;
+}
+
+button.delete {
+	margin-left: 6px;
+	background-color: #FF5454;
+	color: #FFF;
+}
+
+em.originalname {
+	max-width: calc(100% - 520px);
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#age-selector {
+	width: 100%;
+	text-align: right;
+}
+
+button[disabled] {
+	background-color: #DDD;
+}
+
+button[disabled]:hover {
+	border-color: red;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="text"],
+select {
+	transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+@media (max-width: 730px) {
+
+	.button,
+	button,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	input[type="text"],
+	select {
+		min-width: 100%;
+	}
+
+	em.originalname {
+		max-width: calc(100% - 80px);
+	}
+
+	button.apply {
+		margin-left: 0px;
+	}
+}
+
+/*
+CSS Folding Cube animation
+*/
+.loader {
+	display: inline-block;
+	margin: 5px;
+	padding: 1px;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	border: 1px solid #888;
+	top: 50%;
+	animation: loader 4s infinite ease;
+}
+
+.loader-inner {
+	vertical-align: top;
+	display: inline-block;
+	width: 100%;
+	background-color: #444;
+	animation: loader-inner 4s infinite ease-in;
+}
+
+@keyframes loader {
+	0% {
+		transform: rotate(-45deg);
+	}
+
+	25% {
+		transform: rotate(45deg);
+	}
+
+	50% {
+		transform: rotate(45deg);
+	}
+
+	75% {
+		transform: rotate(-45deg);
+	}
+
+	100% {
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes loader-inner {
+	0% {
+		height: 0%;
+	}
+
+	25% {
+		height: 0%;
+	}
+
+	50% {
+		height: 100%;
+	}
+
+	75% {
+		height: 100%;
+	}
+
+	100% {
+		height: 0%;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.social-button {
+	background-position: 25px 0px;
+	box-sizing: border-box;
+	color: #ccc;
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle;
+	width: 100%;
+	border-radius: 3px;
+	margin: 10px auto;
+	outline: rgb(255, 255, 255) none 0px;
+	padding-left: 20%;
+	transition: all 0.2s cubic-bezier(0.72, 0.01, 0.56, 1) 0s;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+
+#facebook-connect {
+	background: #252525 url('../images/facebook.svg') no-repeat scroll 5px 5px / 30px 40px padding-box border-box;
+	border: 1px solid rgb(60, 90, 154);
+}
+
+#facebook-connect:hover {
+	border-color: rgb(60, 90, 154);
+	background: rgb(60, 90, 154) url('../images/facebook-white.svg') no-repeat scroll 5px 5px / 30px 40px padding-box border-box;
+	-webkit-transition: all .8s ease-out;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease-out;
+}
+
+#facebook-connect span {
+	box-sizing: border-box;
+	color: rgb(60, 90, 154);
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	border: 0px none rgb(255, 255, 255);
+	outline: rgb(255, 255, 255) none 0px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+#facebook-connect:hover span {
+	color: #FFF;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+#google-connect {
+	background: #252525 url('../images/google-plus.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+	border: 1px solid rgb(220, 74, 61);
+}
+
+#google-connect:hover {
+	border-color: rgb(220, 74, 61);
+	background: rgb(220, 74, 61) url('../images/google-plus-white.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+	-webkit-transition: all .8s ease-out;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease-out;
+}
+
+#google-connect span {
+	box-sizing: border-box;
+	color: rgb(220, 74, 61);
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	border: 0px none rgb(220, 74, 61);
+	outline: rgb(255, 255, 255) none 0px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+#google-connect:hover span {
+	color: #FFF;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+
+#twitter-connect {
+	background: #252525 url('../images/twitter.png') no-repeat scroll 5px 1px / 45px 45px padding-box border-box;
+	border: 1px solid rgb(85, 172, 238);
+}
+
+#twitter-connect:hover {
+	border-color: rgb(85, 172, 238);
+	background: rgb(85, 172, 238) url('../images/twitter-white.png') no-repeat scroll 5px 1px / 45px 45px padding-box border-box;
+	-webkit-transition: all .8s ease-out;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease-out;
+}
+
+#twitter-connect span {
+	box-sizing: border-box;
+	color: rgb(85, 172, 238);
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	border: 0px none rgb(220, 74, 61);
+	outline: rgb(255, 255, 255) none 0px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+#twitter-connect:hover span {
+	color: #FFF;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+#telegram-connect {
+	background: #252525 url('../images/telegram.png') no-repeat scroll 10px 8px / 30px 30px padding-box border-box;
+	border: 1px solid #36AEE2;
+}
+
+#telegram-connect:hover {
+	border-color: #36AEE2;
+	background: #36AEE2 url('../images/telegram-white.png') no-repeat scroll 10px 8px / 30px 30px padding-box border-box;
+	-webkit-transition: all .8s ease-out;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease-out;
+}
+
+#telegram-connect span {
+	box-sizing: border-box;
+	color: #36AEE2;
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	border: 0px none rgb(255, 255, 255);
+	outline: rgb(255, 255, 255) none 0px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+#telegram-connect:hover span {
+	color: #FFF;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
