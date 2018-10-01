@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  .container
+    h1.summary Login
+    .row
+      .four.columns
+        if config.GOOGLE_CLIENT_ID && config.GOOGLE_CLIENT_SECRET
+          a(href='/auth/google' class='social-button' id='google-connect')
+            span Connect with Google
+        if config.TELEGRAM_BOT_TOKEN
+          a(href='/auth/telegram' class='social-button' id='telegram-connect')
+            span Connect with Telegram
+        if config.TWITTER_CLIENT_ID && config.TWITTER_CLIENT_SECRET
+          a(href='/auth/twitter' class='social-button' id='twitter-connect')
+            span Connect with Twitter
+        if config.FACEBOOK_CLIENT_ID && config.FACEBOOK_CLIENT_SECRET
+          a(href='/auth/facebook' class='social-button' id='facebook-connect')
+            span Connect with Facebook

@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  .header
+    .container
+      .row
+        | Admin
+        |  |
+        a(href='/admin/media') media
+        |  |
+        a(href='/admin/users') users
+        |  | #{user.username} (
+        a(href='/admin/logout') logout
+        | )
