@@ -5,14 +5,11 @@ const config = module.exports;
 
 // Directory to store uploaded files
 config.UPLOAD_DIRECTORY = './files';
-
 // Database filename
 config.DB_FILENAME = './database.db';
-
 // Maximum file size (in bytes)
 // Default: 100MB (100000000)
 config.MAX_UPLOAD_SIZE = 100000000;
-
 config.SITE_NAME = 'ImageHost';
 config.HELLO = `Welcome to ${config.SITE_NAME}`;
 config.TAGLINE = 'A simple image hosting site based on npomf.';
