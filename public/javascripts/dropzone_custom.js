@@ -1,7 +1,6 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-	// Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
 	const previewNode = document.querySelector('.template');
 	previewNode.id = '';
 	previewNode.className = '';
