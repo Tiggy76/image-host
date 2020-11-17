@@ -128,7 +128,7 @@ const createOrGetUser = (user, callback) => {
 	});
 };
 
-const getAllUsers = (callback) => {
+const getAllUsers = callback => {
 	db.all('SELECT * FROM users', [], callback);
 };
 
@@ -136,11 +136,10 @@ const setUserPermissions = (id, permissions, callback) => {
 	db.run('UPDATE users SET permissions = ? WHERE id = ?', [ permissions, id ], callback);
 };
 
-const toObject = (array) =>
-	array.reduce((o, v, i) => {
-		o[i] = v;
-		return o;
-	}, {});
+    const toObject = a => a.reduce((o,v,i) => {
+        o[i] = v;
+        return o;
+    })
 
 const fileFilter = (req, file, cb) => {
 	let found = false;
