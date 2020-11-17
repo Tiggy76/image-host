@@ -28,7 +28,7 @@ config.URL = 'http://localhost:3000';
 // for generating links to uploaded files.
 // config.FILE_URL = 'http://a.my.domain.is.moe';
 // Also used to have a trailing / but shouldn't any more!
-config.FILE_URL = 'http://localhost:3000/f';
+config.FILE_URL = config.URL + 'f';
 
 // Only open to localhost, you can should put this behind nginx or similar
 // config.IFACES = '0.0.0.0'; // Open to all interfaces (Not running behind nginx)
