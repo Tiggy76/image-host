@@ -31,10 +31,7 @@ passport.deserializeUser((obj, done) => {
 	done(null, obj);
 });
 
-let google_auth = false;
-let twitter_auth = false;
-let facebook_auth = false;
-let telegram_auth = false;
+let google_auth = false, twitter_auth = false, facebook_auth = false, telegram_auth = false;
 if (config.GOOGLE_CLIENT_ID && config.GOOGLE_CLIENT_SECRET) {
 	google_auth = true;
 	passport.use('google', new GoogleStrategy(
